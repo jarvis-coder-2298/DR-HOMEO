@@ -15,6 +15,8 @@ before(async () => {
   process.env.ADMIN_PASSWORD_HASH = hashPassword('Test-only-password-123!');
   process.env.SESSION_SECRET = 'test-only-session-secret-at-least-32-characters';
   delete process.env.BLOB_READ_WRITE_TOKEN;
+  delete process.env.BLOB_STORE_ID;
+  delete process.env.VERCEL_OIDC_TOKEN;
   delete process.env.VERCEL;
   server = createServer(handler);
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));

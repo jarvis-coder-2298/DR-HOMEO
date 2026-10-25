@@ -11,7 +11,7 @@ const dataFile = resolve(`test-results/browser-${randomUUID()}.local.json`);
 const password = 'Browser-test-password-123!';
 const base = 'http://127.0.0.1:5174';
 const server = spawn(process.execPath, ['node_modules/vite/bin/vite.js', '--host', '127.0.0.1', '--port', '5174', '--strictPort'], {
-  env: { ...process.env, DATA_FILE: dataFile, ADMIN_USERNAME: 'admin', ADMIN_PASSWORD_HASH: hashPassword(password), SESSION_SECRET: randomUUID() + randomUUID(), BLOB_READ_WRITE_TOKEN: '', VERCEL: '' }, stdio: 'pipe', windowsHide: true,
+  env: { ...process.env, DATA_FILE: dataFile, ADMIN_USERNAME: 'admin', ADMIN_PASSWORD_HASH: hashPassword(password), SESSION_SECRET: randomUUID() + randomUUID(), BLOB_STORE_ID: '', BLOB_READ_WRITE_TOKEN: '', VERCEL_OIDC_TOKEN: '', VERCEL: '' }, stdio: 'pipe', windowsHide: true,
 });
 let browser;
 let activePage;

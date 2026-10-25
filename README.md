@@ -46,6 +46,15 @@ Vercel Blob storage details: [private storage](https://vercel.com/docs/vercel-bl
 
 The first Vercel deployment starts from the seed. Local edits are not automatically uploaded: repeat desired edits in the deployed dashboard. A redeployment preserves the connected Blob document.
 
+To use the private Blob store locally, fill these server-only variables in `.env.local` with the store's actual values, then restart `npm run dev`:
+
+```dotenv
+BLOB_STORE_ID=""
+BLOB_READ_WRITE_TOKEN=""
+```
+
+Set the same variables in Vercel's project environment settings and redeploy. The read-write token works on its own; the SDK also supports `BLOB_STORE_ID` with Vercel-provided OIDC authentication. A store ID alone is not a credential. Keep both values empty only when you want local file storage. Configured Blob storage failures do not fall back to local files. See the [Vercel Blob authentication reference](https://vercel.com/docs/vercel-blob/using-blob-sdk#authentication).
+
 ## Dashboard
 
 - **Profile & content:** name, initials, location, email, headings, introduction, biography, practice status, registration wording, and optional HTTPS portrait URL.

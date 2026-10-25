@@ -4,11 +4,13 @@ import { randomUUID } from 'node:crypto';
 import { get, put, BlobPreconditionFailedError } from '@vercel/blob';
 
 const blobPath = 'portfolio/site.json';
+// The SDK resolves read-write tokens or store-ID + Vercel OIDC authentication.
+const usesBlob = () => Boolean(process.env.BLOB_READ_WRITE_TOKEN || process.env.BLOB_STORE_ID);
 const localPath = () => process.env.DATA_FILE || resolve('data/site.local.json');
 const emptyState = async () => ({ content: JSON.parse(await readFile(resolve('data/site.json'), 'utf8')), revision: 0, feedback: [], rateLimits: {} });
 
 export async function readState() {
-  if (process.env.BLOB_READ_WRITE_TOKEN) {
+  if (usesBlob()) {
     const blob = await get(blobPath, { access: 'private', useCache: false });
     if (!blob) return { state: await emptyState(), etag: null };
     return { state: await new Response(blob.stream).json(), etag: blob.blob.etag };
@@ -25,7 +27,7 @@ export function mutateState(update) {
       const { state, etag } = await readState();
       const result = update(state);
       const json = JSON.stringify(state, null, 2);
-      if (process.env.BLOB_READ_WRITE_TOKEN) {
+      if (usesBlob()) {
         try {
           await put(blobPath, json, {
             access: 'private', contentType: 'application/json', addRandomSuffix: false,
