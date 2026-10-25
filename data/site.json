@@ -1,0 +1,35 @@
+{
+  "profile": {
+    "name": "Dr. Kishwar Shah",
+    "initials": "KS",
+    "focus": "Homoeopathy · Public health",
+    "location": "Pune, Maharashtra",
+    "email": "drkks786@gmail.com",
+    "heroTitle": "A little understanding. A healthier tomorrow.",
+    "heroDescription": "Bringing together a background in homoeopathy, hands-on clinical experience, and a growing perspective in public health.",
+    "aboutTitle": "A person-first perspective on health.",
+    "aboutText": "I’m Dr. Kishwar Shah, a BHMS graduate currently pursuing a Master of Public Health at Savitribai Phule Pune University. My experience spans hospital care, the municipal COVID-19 response, and independent practice in Manmad.",
+    "aboutSecondary": "Across these settings, my work has included patient assessment, health education, follow-up, and treatment adherence. Today, I’m continuing that learning through public health studies in Pune.",
+    "practiceNotice": "My independent practice is currently paused while I pursue my Master of Public Health.",
+    "registration": "Maharashtra Council of Homoeopathy · Registered in 2019",
+    "registrationNote": "Current renewal status has not been verified.",
+    "contactTitle": "Let’s start a conversation.",
+    "contactText": "For professional enquiries or to get in touch, you’re welcome to send an email.",
+    "photoUrl": ""
+  },
+  "focusAreas": [
+    { "id": "prevention", "title": "Prevention & awareness", "description": "Health education and prevention have been part of my primary care work.", "icon": "leaf", "color": "green" },
+    { "id": "continuity", "title": "Continuity of care", "description": "Experience in patient assessment, follow-up, documentation, and treatment adherence.", "icon": "heart", "color": "peach" },
+    { "id": "community", "title": "A community perspective", "description": "Municipal health experience, now complemented by postgraduate study in public health.", "icon": "people", "color": "lavender" }
+  ],
+  "experience": [
+    { "id": "clinic", "role": "Independent practitioner", "organization": "Own clinic · Manmad", "period": "Oct 2024 onwards", "description": "Primary care focused on prevention, health education, and treatment adherence.", "status": "Paused during MPH studies" },
+    { "id": "municipal", "role": "Medical Officer (contract)", "organization": "Malegaon Municipal Corporation", "period": "Mar 2021 – Jan 2022", "description": "COVID-19 response at the Sahara Centre, Kusumba Road dispensary, and Golden Nagar urban health centre.", "status": "" },
+    { "id": "swat", "role": "Resident Medical Officer", "organization": "SWAT Critical Care & Trauma Centre · Malegaon", "period": "Apr 2020 – Jan 2021", "description": "Critical care, follow-up, and documentation.", "status": "" },
+    { "id": "arpan", "role": "Resident Medical Officer", "organization": "Arpan Child Specialty & General Hospital · Manmad", "period": "Mar 2019 – Apr 2020", "description": "Patient assessment and continuity of care.", "status": "" }
+  ],
+  "education": [
+    { "id": "mph", "degree": "Master of Public Health", "institution": "Savitribai Phule Pune University · Pune", "detail": "In progress" },
+    { "id": "bhms", "degree": "Bachelor of Homoeopathic Medicine & Surgery", "institution": "Motiwala Homoeopathic Medical College & Hospital · Nashik", "detail": "2019 · Maharashtra University of Health Sciences" }
+  ]
+}
